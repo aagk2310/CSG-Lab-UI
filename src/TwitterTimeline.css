@@ -1,0 +1,11 @@
+/* TwitterTimeline.css */
+
+.twitter-timeline-container {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.twitter-timeline-container iframe {
+  width: 40vh;
+  height: 40vh;
+}
