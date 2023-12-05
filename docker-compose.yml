@@ -1,0 +1,20 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  node:
+    build: ./DockerFile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+
+  react:
+    build: ./DockerFileReact
+    ports:
+      - "80:80"
+    depends_on:
+      - node
